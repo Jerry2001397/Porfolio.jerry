@@ -8,6 +8,83 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <style>
+    /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.J-boy{
+  display:flex;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 150pxS;
+}
+
+header {
+    background: #1a237e;
+    padding: 20px 0;
+    color: #fff;
+}
+/* Features Section */
+.features {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.features .container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(26, 35, 126, 0.06);
+    width: 300px;
+    text-align: center;
+}
+
+.feature h3 {
+    color: #1a237e;
+    margin-bottom: 15px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .features .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo, nav {
+        float: none;
+        text-align: center;
+        display: block;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    .feature {
+        width: 90%;
+    }
+}
   </style>
 </head>
 
@@ -53,7 +130,7 @@
 <div class="col-lg-6 mx-auto"> <p class="lead mb-4">I am a passionate tech enthusiast, with a desire to improve my society through 
   technology. I am currently pursuing my firt degree in IT with emphasis in Data science at the university of Liberia.
    I work effiently in MS office suit, teache basic computer courses, set up and manage computer lab,configurate
-  and install CCTV Cameras and more.<br> I am currently a student of web development>. </p>
+  and install CCTV Cameras and more.<br> I am currently a student of web development. </p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3"><a href="https://jerry2001397.github.io/Resume/">Ream More About Me
        </a></button> 
@@ -64,24 +141,29 @@
  <img src="./Jerry one.png" class="img-fluid border rounded-3 shadow-lg mb-4"
          alt="Example image" width="300" height="400" loading="lazy"> </div>
  </div> </div>
- <div class="container px-4 py-5" id="featured-3"> <h2 class="pb-2 border-bottom">Why work with Mr. Jerry?</h2>
-   <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"> <div class="feature col"> <div class="feature-icon d-inline-flex align-items-center ]
-    justify-content-center text-bg-primary bg-gradient fs-2 mb-3"> 
-      </div> <h3 class="fs-2 text-body-emphasis">Timely Result</h3>
-      <p>With my knowledge of basic computer components, and the many tools I have worked with over the years—
-        I am capable of yielding timely result when I am giving the opportunity.</p>
-<svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg> </a> </div> <div class="feature col"> 
-  <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"> 
-   </div>
-     <h3 class="fs-2 text-body-emphasis">Multi-skills for productivity</h3> <p>Aside the many tech related skills I have, 
-      I am also skilled indifferent fields of life —business development, writing, driving, Teaching and more. With these multi-skills,
-       I am certain to be productive in any instruction.</p>
-<svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use></svg> </a> </div> <div class="feature col"> 
-  <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-    </div> 
-     <h3 class="fs-2 text-body-emphasis">Problems solving</h3> <p>I use my personal experience 
-      and collborate with team many to solve intricate problems.</p>     
-<br>
+ <section id="J-boy">
+  <div class="feature">
+                    <h3>Why work with Mr. Jerry?</h3>
+                    <h4>Timely Result</h4>
+                    <p>With my knowledge of basic computer components, and the many tools I have worked with over the years—
+        I am capable of yielding timely result when I am given the opportunity.</p>
+                </div>
+                <br>
+                <div class="feature">
+                    <h3>Multi-skills for productivity</h3>
+                    <p>Aside the many tech related skills I have, I am also skilled indifferent fields of life —business development,<br>
+                       writing, driving, Teaching and more. With these multi-skills,
+       I am certain to be productive in any institution.</p>
+                </div>
+                <br>
+                <div class="feature">
+                    <h3>Problems solving</h3>
+                    <p>I use my personal experience 
+      and collborate with team many to solve intricate problems.</p>
+                </div>
+                </section>
+                <br>
+
 <div class="container">
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">

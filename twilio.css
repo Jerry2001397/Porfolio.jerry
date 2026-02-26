@@ -1,0 +1,100 @@
+/* Twilio-inspired modern enhancements for portfolio site */
+
+/* Typography */
+body, .feature, .contact-card, .card, .footer-social a {
+    font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+    letter-spacing: 0.01em;
+}
+
+/* Twilio Red Accent */
+:root {
+    --twilio-red: #F22F46;
+    --twilio-dark: #232946;
+    --twilio-light: #fff;
+}
+
+/* Accent Buttons */
+.btn-twilio {
+    background: var(--twilio-red);
+    color: var(--twilio-light);
+    border: none;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(242,47,70,0.15);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-twilio:hover {
+    background: #d21c3c;
+    color: var(--twilio-light);
+    box-shadow: 0 4px 16px rgba(242,47,70,0.25);
+}
+
+/* Card Glow */
+.card-twilio {
+    background: linear-gradient(135deg, #232946 80%, #F22F46 100%);
+    color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(242,47,70,0.12), 0 1.5px 0 rgba(255,255,255,0.08);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+.card-twilio::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(120deg, rgba(242,47,70,0.08) 0%, rgba(35,41,70,0.7) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+.card-twilio > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Feature Icons */
+.feature-icon {
+    font-size: 2.2rem;
+    color: var(--twilio-red);
+    margin-bottom: 12px;
+}
+
+/* Footer Social Twilio Style */
+.footer-social a {
+    background: var(--twilio-dark);
+    color: var(--twilio-red);
+    border: 2px solid var(--twilio-red);
+    box-shadow: 0 2px 8px rgba(242,47,70,0.08);
+}
+.footer-social a:hover {
+    background: var(--twilio-red);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(242,47,70,0.15);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+    .card-twilio, .feature {
+        border-radius: 10px;
+        padding: 12px 8px;
+    }
+    .feature-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* Twilio Input Fields */
+input, textarea, .form-control {
+    border: 2px solid var(--twilio-red);
+    border-radius: 8px;
+    background: #232946;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus, textarea:focus, .form-control:focus {
+    border-color: #d21c3c;
+    box-shadow: 0 0 0 2px #F22F46;
+    outline: none;
+}

@@ -24,20 +24,20 @@ body > * {
 }
 /* Light blue background for hero section */
 .bg-primary.bg-gradient {
-	background: linear-gradient(135deg, #e3f2fd 0%, #90caf9 100%) !important;
-	color: #1a237e !important;
+	background: linear-gradient(135deg, #000 0%, #232946 100%) !important;
+	color: #fff !important;
 }
 /* Hero section buttons (blue background) */
 .hero-btn-black {
-	background: #111 !important;
+	background: #181a1b !important;
 	color: #fff !important;
 	border: none !important;
 	font-weight: bold;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 	transition: background 0.2s, color 0.2s;
 }
 .hero-btn-black:hover {
-	background: #333 !important;
+	background: #232946 !important;
 	color: #fff !important;
 }
 body {
@@ -69,30 +69,63 @@ body > * {
 #contact .card {
 	border-radius: 12px;
 	border: 2px solid #fff;
+	background: linear-gradient(135deg, #000 60%, #232946 100%) !important;
+	color: #fff !important;
+	box-shadow: 0 2px 12px rgba(26, 35, 126, 0.18);
+	position: relative;
+	overflow: hidden;
+	}
+	#contact .card::before {
+		content: "";
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background: linear-gradient(120deg, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.7) 100%);
+		pointer-events: none;
+		z-index: 0;
+	}
+	#contact .card > * {
+		position: relative;
+		z-index: 1;
 }
 #contact .form-control {
 	border: 2px solid #fff !important;
-	background: #222;
-	color: #fff;
+	background: #181a1b !important;
+	color: #fff !important;
 }
 #contact .form-control:focus {
 	border-color: #90caf9 !important;
 	box-shadow: 0 0 0 2px #90caf9;
-	background: #222;
-	color: #fff;
+	background: #181a1b !important;
+	color: #fff !important;
 }
 #contact .btn-primary {
-	background: #1a237e;
+	background: #232946 !important;
 	border: none;
+	color: #fff !important;
 }
 #contact .btn-primary:hover {
-	background: #3949ab;
+	background: #181a1b !important;
+	color: #fff !important;
 }
 
 footer {
-	background: #1a237e;
-	color: #fff;
+	background: linear-gradient(135deg, #000 0%, #232946 100%) !important;
+	color: #fff !important;
 	font-size: 1rem;
+	position: relative;
+	overflow: hidden;
+	}
+	footer::before {
+		content: "";
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background: linear-gradient(120deg, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.7) 100%);
+		pointer-events: none;
+		z-index: 0;
+	}
+	footer > * {
+		position: relative;
+		z-index: 1;
 }
 footer a {
 	color: #fff;
@@ -115,9 +148,9 @@ footer a:hover {
 }
 
 header {
-	background: #1a237e;
+	background: linear-gradient(135deg, #000 0%, #232946 100%) !important;
+	color: #fff !important;
 	padding: 20px 0;
-	color: #fff;
 }
 
 /* Features Section */
@@ -129,12 +162,27 @@ header {
 	max-width: 350px;
 	margin: 24px auto 0 auto;
 	padding: 20px 24px;
-	background: #fff;
-	color: #1a237e;
+	background: linear-gradient(135deg, #000 60%, #232946 100%);
+	color: #fff;
 	border-radius: 12px;
-	box-shadow: 0 2px 12px rgba(26, 35, 126, 0.10);
+	box-shadow: 0 2px 12px rgba(26, 35, 126, 0.18);
 	text-align: left;
 	font-weight: normal;
+	border: 1.5px solid rgba(255,255,255,0.08);
+	position: relative;
+	overflow: hidden;
+	}
+	.contact-card::before {
+		content: "";
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background: linear-gradient(120deg, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.7) 100%);
+		pointer-events: none;
+		z-index: 0;
+	}
+	.contact-card > * {
+		position: relative;
+		z-index: 1;
 }
 .contact-card h5 {
 	margin-bottom: 12px;
@@ -172,12 +220,28 @@ header {
 }
 
 .feature {
-	background: #fff;
+	background: linear-gradient(135deg, #000 60%, #232946 100%);
+	color: #fff;
 	padding: 30px 25px;
 	border-radius: 10px;
-	box-shadow: 0 2px 12px rgba(26, 35, 126, 0.06);
+	box-shadow: 0 2px 12px rgba(26, 35, 126, 0.18);
 	width: 300px;
 	text-align: center;
+	border: 1.5px solid rgba(255,255,255,0.08);
+	position: relative;
+	overflow: hidden;
+	}
+	.feature::before {
+		content: "";
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background: linear-gradient(120deg, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.7) 100%);
+		pointer-events: none;
+		z-index: 0;
+	}
+	.feature > * {
+		position: relative;
+		z-index: 1;
 }
 
 .feature h3 {

@@ -85,33 +85,61 @@
         <p class="text-center mb-5" style="max-width:700px;margin:0 auto;">
           Choosing the right professional is crucial for your project's success. Here’s why I stand out as a reliable and results-driven partner:
         </p>
+        <style>
+          .twilio-slide-in-right {
+            opacity: 0;
+            transform: translateX(80px);
+            transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+          }
+          .twilio-slide-in-right.twilio-in-view {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        </style>
         <div class="d-flex flex-wrap justify-content-center gap-4">
-          <div class="feature card-twilio">
+          <div class="feature card-twilio twilio-slide-in-right">
             <div class="feature-icon"><i class="bi bi-cpu"></i></div>
             <h4>Proven Technical Expertise</h4>
             <p>I have a strong foundation in IT, web development, and hands-on experience with a variety of technologies. My technical skills ensure your project is built on solid ground and delivered to modern standards.</p>
           </div>
-          <div class="feature card-twilio">
+          <div class="feature card-twilio twilio-slide-in-right">
             <div class="feature-icon"><i class="bi bi-chat-dots"></i></div>
             <h4>Professional Communication</h4>
             <p>I value clear, timely, and transparent communication. You’ll always be informed about progress, challenges, and solutions, making collaboration smooth and stress-free.</p>
           </div>
-          <div class="feature card-twilio">
+          <div class="feature card-twilio twilio-slide-in-right">
             <div class="feature-icon"><i class="bi bi-clock-history"></i></div>
             <h4>Timely & Reliable Delivery</h4>
             <p>I am committed to meeting deadlines and delivering quality results. My organizational skills and dedication mean your project will be completed efficiently and on time.</p>
           </div>
-          <div class="feature card-twilio">
+          <div class="feature card-twilio twilio-slide-in-right">
             <div class="feature-icon"><i class="bi bi-lightbulb"></i></div>
             <h4>Creative Problem Solving</h4>
             <p>I approach challenges with creativity and persistence, finding effective solutions even in complex situations. Your goals become my mission.</p>
           </div>
-          <div class="feature card-twilio">
+          <div class="feature card-twilio twilio-slide-in-right">
             <div class="feature-icon"><i class="bi bi-people"></i></div>
             <h4>Multi-Disciplinary Skills</h4>
             <p>Beyond tech, I bring experience in business, teaching, and teamwork. This broad perspective helps me understand your needs and deliver value beyond code.</p>
           </div>
         </div>
+        <script>
+          function twilioInView() {
+            const cards = document.querySelectorAll('.twilio-slide-in-right');
+            const trigger = window.innerHeight * 0.92;
+            cards.forEach(card => {
+              const rect = card.getBoundingClientRect();
+              if (rect.top < trigger) {
+                card.classList.add('twilio-in-view');
+              } else {
+                card.classList.remove('twilio-in-view');
+              }
+            });
+          }
+          window.addEventListener('scroll', twilioInView);
+          window.addEventListener('resize', twilioInView);
+          window.addEventListener('DOMContentLoaded', twilioInView);
+        </script>
       </div>
     </section>
 
